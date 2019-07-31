@@ -1,0 +1,29 @@
+{
+    "name": "nstack-io/php-sdk",
+    "description": "Wrapper for API to NStack",
+    "keywords": [
+        "nstack",
+        "php"
+    ],
+    "license": "MIT",
+    "homepage": "http://nodesagency.com",
+    "authors": [
+        {
+            "name": "Casper Rasmussen",
+            "email": "cr@nodes.dk",
+            "role": "CTO & Partner"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "6.x"
+    },
+    "require-dev" : {
+        "phpunit/phpunit": "~5.7",
+    },
+    "autoload": {
+        "psr-4": {
+            "NStack\\NStack\\": "src/",
+            "NStack\\NStack\\Tests\\": "tests/"
+        }
+    }
+}
