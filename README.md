@@ -9,7 +9,7 @@
 
 To install this package you will need:
 
-* PHP 7.2+
+* PHP 7.1+
 
 ## ⚙ Usage
 
