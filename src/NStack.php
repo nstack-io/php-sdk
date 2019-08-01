@@ -2,6 +2,7 @@
 
 namespace NStack;
 
+use NStack\Clients\NStackClient;
 use NStack\Exceptions\MissingMasterKey;
 
 /**
@@ -10,8 +11,14 @@ use NStack\Exceptions\MissingMasterKey;
  * @package NStack
  * @author  Casper Rasmussen <cr@nodes.dk>
  */
-class NStack extends Config
+class NStack
 {
+    /** @var \NStack\Config */
+    protected $config;
+
+    /** @var \NStack\Clients\NStackClient */
+    protected $client;
+
     /**
      * NStack constructor.
      *
@@ -20,8 +27,8 @@ class NStack extends Config
      */
     public function __construct(Config $config)
     {
-        parent::__construct($config->getAppId(), $config->getRestAppKey(), $config->getMasterKey(),
-            $config->getBaseUrl());
+        $this->config = $config;
+        $this->client = new NStackClient($config);
     }
 
     /**
@@ -33,10 +40,11 @@ class NStack extends Config
      */
     public function getDeeplink(): string
     {
-        if (!$this->masterKey) {
+        if (!$this->config->getMasterKey()) {
             throw new MissingMasterKey();
         }
 
-        return $this->baseUrl . '/deeplink/' . $this->appId . '/' . $this->masterKey;
+        return $this->config->getBaseUrl() . '/deeplink/' . $this->config->getAppId() . '/' .
+               $this->config->getMasterKey();
     }
 }
