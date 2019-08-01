@@ -22,8 +22,8 @@
     },
     "autoload": {
         "psr-4": {
-            "NStack\\NStack\\": "src/",
-            "NStack\\NStack\\Tests\\": "tests/"
+            "NStack": "src/",
+            "NStack\\Tests\\": "tests/"
         }
     }
 }
