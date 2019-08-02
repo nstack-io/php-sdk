@@ -13,11 +13,11 @@ To install this package you will need:
 
 Run 
 
-`composer require nstack-io/php-sdk`
+`composer require nstack/php-sdk`
 
 or setup in composer.json
 
-`nstack-io/php-sdk: 1.0.x`
+`nstack/php-sdk: 1.0.x`
 
 ## ⚙ Usage
 
