@@ -1,5 +1,5 @@
 {
-    "name": "nstack-io/php-sdk",
+    "name": "nstack/php-sdk",
     "description": "Wrapper for API to NStack",
     "keywords": [
         "nstack",
