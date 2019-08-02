@@ -2,7 +2,6 @@
 
 namespace NStack\Clients;
 
-use Illuminate\Database\Eloquent\Collection;
 use NStack\Exceptions\NotFoundException;
 use NStack\Models\Continent;
 
@@ -20,11 +19,10 @@ class ContinentsClient extends NStackClient
     /**
      * index
      *
-     * @return \Illuminate\Database\Eloquent\Collection
-     * @throws \GuzzleHttp\Exception\RequestException
+     * @return array
      * @author Casper Rasmussen <cr@nodes.dk>
      */
-    public function index(): Collection
+    public function index(): array
     {
         $response = $this->get($this->buildPath($this->path));
 
@@ -32,12 +30,12 @@ class ContinentsClient extends NStackClient
 
         $data = json_decode($contents, true);
 
-        $collection = new Collection();
+        $array = [];
         foreach ($data['data'] as $object) {
-            $collection->add(new Continent($object));
+            $array[] = Continent($object);
         }
 
-        return $collection;
+        return $array;
     }
 
     /**

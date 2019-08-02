@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Africa1",
+            "code": "AF",
+            "image_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/continents\/CAF3x_xGeNAFY9jg_7WeCkX8KDE.png"
+        },
+        {
+            "id": 2,
+            "name": "Antarctica",
+            "code": "AN",
+            "image_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/continents\/ANTARCTICA3x_BVJDjvcke6_aoxQl8ktdH.png"
+        },
+        {
+            "id": 3,
+            "name": "Asia",
+            "code": "AS",
+            "image_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/continents\/CAS3x_suX3eHVPmU_ErLJCXELYE.png"
+        },
+        {
+            "id": 4,
+            "name": "Europe",
+            "code": "EU",
+            "image_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/continents\/CEU3x_bPFCbLYJKk_Rca4dmKYqf.png"
+        },
+        {
+            "id": 5,
+            "name": "North America",
+            "code": "NA",
+            "image_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/continents\/CNA3x_lJKXj1YUr5_c0byq0KC0d.png"
+        },
+        {
+            "id": 6,
+            "name": "Oceania",
+            "code": "OC",
+            "image_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/continents\/COC3x_wXa1fb6mf9_A3TVi8h8mA.png"
+        },
+        {
+            "id": 7,
+            "name": "South America",
+            "code": "SA",
+            "image_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/continents\/CSA3x_JjsnQoYZtu_mfhwnKpWRn.png"
+        }
+    ]
+}
