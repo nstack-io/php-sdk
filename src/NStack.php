@@ -3,6 +3,7 @@
 namespace NStack;
 
 use NStack\Clients\ContinentsClient;
+use NStack\Clients\CountriesClient;
 use NStack\Exceptions\MissingMasterKeyException;
 
 /**
@@ -19,6 +20,9 @@ class NStack
     /** @var \NStack\Clients\ContinentsClient */
     protected $continentsClient;
 
+    /** @var \NStack\Clients\CountriesClient */
+    protected $countriesClient;
+
     /**
      * NStack constructor.
      *
@@ -29,6 +33,7 @@ class NStack
     {
         $this->config = $config;
         $this->continentsClient = new ContinentsClient($config);
+        $this->countriesClient = new CountriesClient($config);
     }
 
     /**
@@ -49,6 +54,17 @@ class NStack
     public function getContinentsClient(): ContinentsClient
     {
         return $this->continentsClient;
+    }
+
+    /**
+     * getCountriesClient
+     *
+     * @return \NStack\Clients\CountriesClient
+     * @author Casper Rasmussen <cr@nodes.dk>
+     */
+    public function getCountriesClient(): CountriesClient
+    {
+        return $this->countriesClient;
     }
 
     /**

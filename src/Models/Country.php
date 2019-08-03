@@ -259,7 +259,9 @@ class Country extends Model
     }
 
     /**
-     * @return ?\NStack\Models\Timezone
+     * getCapitalTimezone
+     *
+     * @return \NStack\Models\Timezone|null
      * @author Casper Rasmussen <cr@nodes.dk>
      */
     public function getCapitalTimezone(): ?\NStack\Models\Timezone
