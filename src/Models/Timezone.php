@@ -36,7 +36,7 @@ class Timezone extends Model
         $this->id = (int)$data['id'];
         $this->name = (string)$data['name'];
         $this->abbr = (string)$data['abbr'];
-        $this->offsetSec = (string)$data['offset_sec'];
+        $this->offsetSec = (int)$data['offset_sec'];
         $this->label = (string)$data['label'];
     }
 

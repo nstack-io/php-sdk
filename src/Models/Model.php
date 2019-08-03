@@ -18,7 +18,13 @@ abstract class Model
         try {
             $this->parse($data);
         } catch (\Throwable $e) {
-            throw new FailedToParseException(sprintf('Failed to parse %s: %s', self::class, $e->getMessage()));
+            $message = sprintf('Failed to parse %s: %s', get_called_class(), $e->getMessage());
+
+            if(!empty($data['id'])) {
+                $message .= ' ID: ' . $data['id'];
+            }
+
+            throw new FailedToParseException($message);
         }
     }
 
