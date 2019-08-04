@@ -1,0 +1,26 @@
+{
+    "data": {
+        "id": 4,
+        "code": "AG",
+        "code_iso": "ATG",
+        "name": "Antigua and Barbuda",
+        "native": "Antigua and Barbuda",
+        "phone": 1268,
+        "continent": "NA",
+        "capital": "Saint John's",
+        "capital_lat": 47.5605413,
+        "capital_lng": -52.7128315,
+        "currency": "XCD",
+        "currency_name": "XCD",
+        "languages": "en",
+        "image_1_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/countries\/AG3x_R6nZn0qeSE_EBExDcErik.png",
+        "image_2_url": "http:\/\/nodes-cdn-development.imgix.net\/nstack\/images\/original\/countries\/Antigua-and-Barbuda_RXNjZRvgU9_3Vya6eIidp.png",
+        "capital_timezone": {
+            "id": 96,
+            "name": "America\/Antigua",
+            "abbr": "ast",
+            "offset_sec": -14400,
+            "label": "UTC-4"
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "data": {
+        "default": {
+            "ok": "#Ok",
+            "cancel": "__cancel",
+            "no": "__no",
+            "yes": "__yes",
+            "retry": "__retry",
+            "edit": "__edit",
+            "save": "__save",
+            "back": "__back",
+            "settings": "__settings",
+            "later": "__later",
+            "next": "__next",
+            "previous": "__previous",
+            "skip": "__skip"
+        },
+        "versionControl": {
+            "updateHeader": "#New version is out, please update",
+            "forceHeader": "#new text2",
+            "negativeBtn": "#Cancel",
+            "positiveBtn": "#Update",
+            "newInVersionHeader": "#New in this version",
+            "okBtn": "#Ok"
+        },
+        "rateReminder": {
+            "title": "#Rate the app",
+            "body": "#We can see you like the application. Would you like to rate it?",
+            "yesBtn": "#Yes",
+            "laterBtn": "#Later",
+            "noBtn": "#No"
+        },
+        "error": {
+            "authenticationError1": "#1",
+            "connectionError": "__connectionError",
+            "errorTitle": "__errorTitle",
+            "unknownError": "__unknownError",
+            "t": "#t"
+        }
+    },
+    "meta": {
+        "language": {
+            "id": 11,
+            "name": "English (UK)",
+            "locale": "en-GB",
+            "direction": "LRM",
+            "is_default": false,
+            "is_best_fit": false
+        },
+        "platform": {
+            "id": 12,
+            "slug": "mobile"
+        }
+    }
+}

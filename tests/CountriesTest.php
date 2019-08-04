@@ -2,34 +2,30 @@
 
 namespace NStack\Tests;
 
-use NStack\Exceptions\FailedToParseException;
+use NStack\Clients\CountriesClient;
 use NStack\Models\Country;
 
 class CountriesTest extends TestCase
 {
-    public function testParseModelSuccess()
+    public function testIndex()
     {
-        $data = $this->getMockAsArray('countries-index.json');
+        $client = $this->getClientWithMockedGet('countries-index.json');
 
-        foreach ($data['data'] as $raw) {
-            $continent = new Country($raw);
+        $client = new CountriesClient($this->getConfig(), $client);
+        $list = $client->index();
+
+        foreach ($list as $continent) {
             $this->assertInstanceOf(Country::class, $continent);
         }
     }
 
-    public function testParseModelFailed()
+    public function testShow()
     {
-        $data = $this->getMockAsArray('continents-index.json');
+        $client = $this->getClientWithMockedGet('countries-show.json');
 
-        $item = $data['data'][0];
-        unset($item['id']);
+        $client = new CountriesClient($this->getConfig(), $client);
+        $entry = $client->show(1);
 
-        try {
-            new Country([]);
-
-            $this->assertTrue(false);
-        } catch (FailedToParseException $e) {
-            $this->assertTrue(true);
-        }
+        $this->assertInstanceOf(Country::class, $entry);
     }
 }

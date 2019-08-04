@@ -24,7 +24,7 @@ class CountriesClient extends NStackClient
      */
     public function index(): array
     {
-        $response = $this->get($this->buildPath($this->path));
+        $response = $this->client->get($this->buildPath($this->path));
 
         $contents = $response->getBody()->getContents();
 
@@ -42,18 +42,18 @@ class CountriesClient extends NStackClient
      * show
      *
      * @param $id
-     * @return \NStack\Clients\Continent
+     * @return \NStack\Models\Country
      * @throws \NStack\Exceptions\FailedToParseException
      * @author Casper Rasmussen <cr@nodes.dk>
      */
-    public function show($id): Continent
+    public function show($id): Country
     {
-        $response = $this->get($this->buildPath($this->path . '/' . $id));
+        $response = $this->client->get($this->buildPath($this->path . '/' . $id));
 
         $contents = $response->getBody()->getContents();
 
         $data = json_decode($contents, true);
 
-        return new Country($data);
+        return new Country($data['data']);
     }
 }

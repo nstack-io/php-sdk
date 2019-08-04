@@ -2,29 +2,31 @@
 
 namespace NStack\Clients;
 
-use NStack\Models\Continent;
+use NStack\Models\Country;
+use NStack\Models\Resource;
 
 /**
- * Class ContinentsClient
+ * Class CountriesClient
  *
  * @package NStack\Clients
  * @author  Casper Rasmussen <cr@nodes.dk>
  */
-class ContinentsClient extends NStackClient
+class LocalizeClient extends NStackClient
 {
     /** @var string */
-    protected $path = 'geographic/continents';
+    protected $path = 'content/localize';
 
     /**
-     * index
+     * indexResources
      *
+     * @param string $platform
      * @return array
      * @throws \NStack\Exceptions\FailedToParseException
      * @author Casper Rasmussen <cr@nodes.dk>
      */
-    public function index(): array
+    public function indexResources(string $platform): array
     {
-        $response = $this->client->get($this->buildPath($this->path));
+        $response = $this->client->get($this->buildPath($this->path . '/resources/platforms/' . $platform));
 
         $contents = $response->getBody()->getContents();
 
@@ -32,28 +34,27 @@ class ContinentsClient extends NStackClient
 
         $array = [];
         foreach ($data['data'] as $object) {
-            $array[] = new Continent($object);
+            $array[] = new Resource($object);
         }
 
         return $array;
     }
 
     /**
-     * show
+     * showResource
      *
-     * @param $id
-     * @return \NStack\Models\Continent
-     * @throws \NStack\Exceptions\FailedToParseException
+     * @param $url
+     * @return array
      * @author Casper Rasmussen <cr@nodes.dk>
      */
-    public function show($id): Continent
+    public function showResource($url): array
     {
-        $response = $this->client->get($this->buildPath($this->path . '/' . $id));
+        $response = $this->client->get($url);
 
         $contents = $response->getBody()->getContents();
 
         $data = json_decode($contents, true);
 
-        return new Continent($data['data']);
+        return $data;
     }
 }

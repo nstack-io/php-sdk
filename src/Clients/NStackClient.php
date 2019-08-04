@@ -11,27 +11,34 @@ use NStack\Config;
  * @package NStack\Clients
  * @author  Casper Rasmussen <cr@nodes.dk>
  */
-class NStackClient extends Client
+class NStackClient
 {
+    protected $client;
+
     protected $nstackConfig;
 
     /**
      * NStackClient constructor.
      *
-     * @param \NStack\Config $nstackConfig
+     * @param \NStack\Config          $nstackConfig
+     * @param \GuzzleHttp\Client|null $client
      * @author Casper Rasmussen <cr@nodes.dk>
      */
-    public function __construct(Config $nstackConfig)
+    public function __construct(Config $nstackConfig, Client $client = null)
     {
-        parent::__construct([
-            'base_uri' => $nstackConfig->getBaseUrl(),
-            'timeout'  => 5,
-            'headers'  => [
-                'X-Application-Id' => $nstackConfig->getAppId(),
-                'X-Rest-Api-Key'   => $nstackConfig->getRestAppKey(),
-                'Content-Type'     => 'application/json',
-            ],
-        ]);
+        if ($client) {
+            $this->client = $client;
+        } else {
+            $this->client = new Client(([
+                'base_uri' => $nstackConfig->getBaseUrl(),
+                'timeout'  => 5,
+                'headers'  => [
+                    'X-Application-Id' => $nstackConfig->getAppId(),
+                    'X-Rest-Api-Key'   => $nstackConfig->getRestAppKey(),
+                    'Content-Type'     => 'application/json',
+                ],
+            ]));
+        }
 
         $this->nstackConfig = $nstackConfig;
     }
