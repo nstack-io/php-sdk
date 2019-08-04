@@ -3,7 +3,7 @@
 
 ## 📝 Introduction
 
-A API wrapper for nstack.io API
+An API wrapper for nstack.io API
 
 ## 📦 Installation
 
@@ -22,9 +22,27 @@ or setup in composer.json
 ## ⚙ Usage
 
 ````php
-$config = new \NStack\Config('[APP_ID]', '[REST_KEY]');
+$config = new \NStack\Config('APP_ID', 'REST_KEY');
 $nstack = new \NStack\NStack($config);
- ```
+```
+ 
+## Features
+
+[x] Geographic continent 
+[x] Geographic countries 
+[ ] Geographic languages 
+[ ] Geographic Ip addresses 
+[ ] Geographic Timezones
+[x] Content Localize resources
+[ ] Content Localize languages
+[ ] Content Localize proposals
+[ ] Content Files
+[ ] Content Collections
+[ ] Notify updates
+[ ] UGC pushlogs
+[ ] Valitors
+
+ 
 
 ## 🏆 Credits
 
