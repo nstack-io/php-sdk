@@ -54,6 +54,24 @@ class Config
     }
 
     /**
+     * createFromArray
+     *
+     * @param array $data
+     * @return \NStack\Config
+     * @author Casper Rasmussen <cr@nodes.dk>
+     */
+    public static function createFromArray(array $data): self
+    {
+        return new self(
+            $data['application_id'],
+            $data['rest_app_key'],
+            $data['master_key'] ?? null,
+            $data['base_url'] ?? null,
+            $data['version']
+        );
+    }
+
+    /**
      * getBaseUrl
      *
      * @return string
