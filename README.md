@@ -28,21 +28,19 @@ $nstack = new \NStack\NStack($config);
  
 ## Features
 
-[x] Geographic continent 
-[x] Geographic countries 
-[ ] Geographic languages 
-[ ] Geographic Ip addresses 
-[ ] Geographic Timezones
-[x] Content Localize resources
-[ ] Content Localize languages
-[ ] Content Localize proposals
-[ ] Content Files
-[ ] Content Collections
-[ ] Notify updates
-[ ] UGC pushlogs
-[ ] Valitors
-
- 
+    [x] Geographic continent
+    [x] Geographic countries
+    [ ] Geographic languages
+    [ ] Geographic Ip addresses
+    [ ] Geographic Timezones
+    [x] Content Localize resources
+    [ ] Content Localize languages
+    [ ] Content Localize proposals
+    [ ] Content Files
+    [ ] Content Collections
+    [ ] Notify updates
+    [ ] UGC pushlogs
+    [ ] Valitors
 
 ## 🏆 Credits
 
