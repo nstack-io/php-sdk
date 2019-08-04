@@ -21,7 +21,7 @@ or setup in composer.json
 
 ## ⚙ Usage
 
-````php
+```php
 $config = new \NStack\Config('APP_ID', 'REST_KEY');
 $nstack = new \NStack\NStack($config);
 ```
