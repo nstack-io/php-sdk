@@ -34,11 +34,12 @@ $nstack = new \NStack\NStack($config);
 
     [x] Geographic continent
     [x] Geographic countries
-    [ ] Geographic languages
-    [ ] Geographic Ip addresses
-    [ ] Geographic Timezones
+    [x] Geographic languages
+    [ ] Geographic Timezone
+    [x] Geographic Timezones
+    [x] Geographic Ip addresses
     [x] Content Localize resources
-    [ ] Content Localize languages
+    [x] Content Localize languages
     [ ] Content Localize proposals
     [ ] Content Files
     [ ] Content Collections
