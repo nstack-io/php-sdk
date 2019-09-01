@@ -1,0 +1,54 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Afrikaans",
+            "locale": "af-ZA",
+            "direction": "LRM",
+            "is_default": false,
+            "is_best_fit": false
+        },
+        {
+            "id": 2,
+            "name": "Bulgarian",
+            "locale": "bg-BG",
+            "direction": "LRM",
+            "is_default": false,
+            "is_best_fit": false
+        },
+        {
+            "id": 3,
+            "name": "Catalan",
+            "locale": "ca-AD",
+            "direction": "LRM",
+            "is_default": false,
+            "is_best_fit": false
+        },
+        {
+            "id": 4,
+            "name": "Czech",
+            "locale": "cs-CZ",
+            "direction": "LRM",
+            "is_default": false,
+            "is_best_fit": false
+        },
+        {
+            "id": 5,
+            "name": "Welsh",
+            "locale": "cy-GB",
+            "direction": "LRM",
+            "is_default": false,
+            "is_best_fit": false
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "total": 5,
+            "count": 5,
+            "per_page": 500,
+            "current_page": 1,
+            "total_pages": 1,
+            "links": {}
+        }
+    }
+}
