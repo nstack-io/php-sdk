@@ -1,0 +1,9 @@
+{
+    "data": {
+        "id": 240,
+        "name": "Europe/Copenhagen",
+        "abbr": "cet",
+        "offset_sec": 3600,
+        "label": "UTC+1"
+    }
+}

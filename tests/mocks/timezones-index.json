@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Australia/Adelaide",
+            "abbr": "cast",
+            "offset_sec": 37800,
+            "label": "UTC+10.5"
+        },
+        {
+            "id": 2,
+            "name": "Australia/Broken_Hill",
+            "abbr": "acst",
+            "offset_sec": 37800,
+            "label": "UTC+10.5"
+        },
+        {
+            "id": 3,
+            "name": "Australia/Darwin",
+            "abbr": "acst",
+            "offset_sec": 34200,
+            "label": "UTC+9.5"
+        },
+        {
+            "id": 4,
+            "name": "Australia/North",
+            "abbr": "acst",
+            "offset_sec": 34200,
+            "label": "UTC+9.5"
+        },
+        {
+            "id": 5,
+            "name": "Australia/South",
+            "abbr": "acst",
+            "offset_sec": 37800,
+            "label": "UTC+10.5"
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "total": 5,
+            "count": 5,
+            "per_page": 1000,
+            "current_page": 1,
+            "total_pages": 1,
+            "links": {}
+        }
+    }
+}

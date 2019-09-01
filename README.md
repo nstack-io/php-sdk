@@ -31,8 +31,8 @@ $nstack = new \NStack\NStack($config);
     [x] Geographic continent
     [x] Geographic countries
     [ ] Geographic languages
+    [x] Geographic Timezones
     [x] Geographic Ip addresses
-    [ ] Geographic Timezones
     [x] Content Localize resources
     [x] Content Localize languages
     [ ] Content Localize proposals
