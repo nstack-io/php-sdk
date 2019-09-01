@@ -1,4 +1,8 @@
 # php-sdk
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nstack-io/php-sdk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nstack-io/php-sdk/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/nstack-io/php-sdk/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nstack-io/php-sdk/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/nstack-io/php-sdk/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nstack-io/php-sdk/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/nstack-io/php-sdk/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
 
 ## 📝 Introduction
