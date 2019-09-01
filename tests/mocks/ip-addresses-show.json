@@ -1,0 +1,18 @@
+{
+    "data": {
+        "id": 1,
+        "ip_start": "0.0.0.0",
+        "ip_end": "0.255.255.255",
+        "country": "US",
+        "state_prov": "California",
+        "city": "Marina del Rey",
+        "lat": 33.9802,
+        "lng": -118.44,
+        "time_zone_offset": "-7",
+        "time_zone_name": "America/Los_Angeles",
+        "isp_name": "Internet Assigned Numbers Authority",
+        "connection_type": "",
+        "type": "ipv4",
+        "required_ip": "0.0.0.0"
+    }
+}
