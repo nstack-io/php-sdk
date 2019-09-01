@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "id": 21,
+            "name": "Hebrew",
+            "locale": "he-IL",
+            "direction": "RML",
+            "is_default": false,
+            "is_best_fit": false
+        },
+        {
+            "id": 37,
+            "name": "Portuguese (Brazil)",
+            "locale": "pt-BR",
+            "direction": "LRM",
+            "is_default": false,
+            "is_best_fit": false
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "total": 2,
+            "count": 2,
+            "per_page": 500,
+            "current_page": 1,
+            "total_pages": 1,
+            "links": {}
+        }
+    }
+}
