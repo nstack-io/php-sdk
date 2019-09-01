@@ -1,0 +1,18 @@
+{
+    "data": {
+        "id": 6800311,
+        "ip_start": "88.146.252.0",
+        "ip_end": "88.146.255.255",
+        "country": "CZ",
+        "state_prov": "Zlín",
+        "city": "Roznau",
+        "lat": 49.4521,
+        "lng": 18.1588,
+        "time_zone_offset": "2",
+        "time_zone_name": "Europe/Prague",
+        "isp_name": "UPC Czech",
+        "connection_type": "Vladislav Ludik",
+        "type": "ipv4",
+        "required_ip": "88.146.255.74"
+    }
+}
