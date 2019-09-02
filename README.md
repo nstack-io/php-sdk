@@ -40,7 +40,7 @@ $nstack = new \NStack\NStack($config);
     [x] Geographic Ip addresses
     [x] Content Localize resources
     [x] Content Localize languages
-    [ ] Content Localize proposals
+    [x] Content Localize proposals
     [ ] Content Files
     [ ] Content Collections
     [ ] Notify updates

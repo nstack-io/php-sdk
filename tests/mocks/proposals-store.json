@@ -1,0 +1,11 @@
+{
+    "data": {
+        "id": 13,
+        "application_id": 1,
+        "key": "forceHeader",
+        "section": "versionControl",
+        "locale": "en-GB",
+        "value": "new text2",
+        "can_delete": true
+    }
+}

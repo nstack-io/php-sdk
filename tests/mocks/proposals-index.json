@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "application_id": 31,
+            "key": "no",
+            "section": "default",
+            "locale": "en-GB",
+            "value": "test",
+            "can_delete": false
+        }
+    ]
+}
