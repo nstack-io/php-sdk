@@ -61,9 +61,7 @@ class TimezoneClient extends NStackClient
      */
     public function showByLatLng(float $lat, float $lng): Timezone
     {
-        $response = $this->client->get(
-            $this->buildPath($this->path . '/by_lat_lng?lat_lng=' . $lat . ',' . $lng)
-        );
+        $response = $this->client->get($this->buildPath($this->path . '/by_lat_lng?lat_lng=' . $lat . ',' . $lng));
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
         return new Timezone($data['data']);
