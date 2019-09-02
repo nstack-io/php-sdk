@@ -41,6 +41,42 @@ class TestCase extends \PHPUnit\Framework\TestCase
     }
 
     /**
+     * getClientWithMockedPost
+     *
+     * @param string $filename
+     * @return Client
+     * @author Tiago Araujo <tiar@nodesagency.com>
+     */
+    protected function getClientWithMockedPost(string $filename): Client
+    {
+        $response = new Response(200, ['Content-Type' => 'application/json'],
+            $this->getMockAsString($filename));
+
+        $guzzle = \Mockery::mock(Client::class);
+        $guzzle->shouldReceive('post')->once()->andReturn($response);
+
+        return $guzzle;
+    }
+
+    /**
+     * getClientWithMockedDelete
+     *
+     * @param string $filename
+     * @return Client
+     * @author Tiago Araujo <tiar@nodesagency.com>
+     */
+    protected function getClientWithMockedDelete(string $filename): Client
+    {
+        $response = new Response(200, ['Content-Type' => 'application/json'],
+            $this->getMockAsString($filename));
+
+        $guzzle = \Mockery::mock(Client::class);
+        $guzzle->shouldReceive('delete')->once()->andReturn($response);
+
+        return $guzzle;
+    }
+
+    /**
      * getMockAsString
      *
      * @param string $fileName
