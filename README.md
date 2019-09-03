@@ -30,7 +30,7 @@ $config = new \NStack\Config('APP_ID', 'REST_KEY');
 $nstack = new \NStack\NStack($config);
 ```
  
-## Features
+## 💡 Features
 
     [x] Geographic continent
     [x] Geographic countries
@@ -42,7 +42,7 @@ $nstack = new \NStack\NStack($config);
     [x] Content Localize languages
     [x] Content Localize proposals
     [x] Content Files
-    [ ] Content Collections
+    [x] Content Collections
     [ ] Notify updates
     [ ] UGC pushlogs
     [ ] Valitors

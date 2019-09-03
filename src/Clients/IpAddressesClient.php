@@ -34,7 +34,6 @@ class IpAddressesClient extends NStackClient
     /**
      * show
      *
-     *
      * @param   String $ip
      * @return  IpAddress
      * @throws  FailedToParseException
