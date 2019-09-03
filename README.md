@@ -41,7 +41,7 @@ $nstack = new \NStack\NStack($config);
     [x] Content Localize resources
     [x] Content Localize languages
     [x] Content Localize proposals
-    [ ] Content Files
+    [x] Content Files
     [ ] Content Collections
     [ ] Notify updates
     [ ] UGC pushlogs
