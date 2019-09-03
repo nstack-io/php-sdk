@@ -1,0 +1,16 @@
+{
+    "data": {
+        "id": 625,
+        "name": "test",
+        "tags": "test,mytest",
+        "privacy": "private-password",
+        "gone_at": "2019-01-01 00:00:00",
+        "mime": "image/jpeg",
+        "size": 16980,
+        "password": "WZwZAztQ",
+        "url": "https://nstack-staging.vapor.cloud/files/625",
+        "cdn_url": null,
+        "show_url": "https://nstack-staging.vapor.cloud/files/625?show=1",
+        "download_url": "https://nstack-staging.vapor.cloud/files/625?download=1"
+    }
+}
