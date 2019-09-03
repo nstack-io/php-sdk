@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "id": 309,
+            "Title": "Bread",
+            "Description": "A delicious loaf of rye bread",
+            "Price": 5
+        },
+        {
+            "id": 310,
+            "Title": "Water",
+            "Description": "A 1l bottle of spring water",
+            "Price": 2
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "total": 2,
+            "count": 2,
+            "per_page": 20,
+            "current_page": 1,
+            "total_pages": 1,
+            "links": {}
+        }
+    }
+}
