@@ -45,7 +45,7 @@ $nstack = new \NStack\NStack($config);
     [x] Content Collections
     [ ] Notify updates
     [ ] UGC pushlogs
-    [ ] Valitors
+    [x] Validators
 
 ## 🏆 Credits
 
