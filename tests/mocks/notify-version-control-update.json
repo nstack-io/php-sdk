@@ -1,0 +1,40 @@
+{
+    "update": "yes",
+    "update_versions": [
+        {
+            "id": 689,
+            "version": "40",
+            "update": "on",
+            "new_in_version": false,
+            "change_log": null,
+            "file_url": null
+        },
+        {
+            "id": 688,
+            "version": "35",
+            "update": "on",
+            "new_in_version": false,
+            "change_log": null,
+            "file_url": null
+        }
+    ],
+    "new_in_version": false,
+    "new_in_versions": [
+        {
+            "id": 689,
+            "version": "40",
+            "update": "on",
+            "new_in_version": false,
+            "change_log": null,
+            "file_url": null
+        },
+        {
+            "id": 688,
+            "version": "35",
+            "update": "on",
+            "new_in_version": false,
+            "change_log": null,
+            "file_url": null
+        }
+    ]
+}
