@@ -43,8 +43,8 @@ $nstack = new \NStack\NStack($config);
     [x] Content Localize proposals
     [x] Content Files
     [x] Content Collections
-    [x] Notify updates
-    [ ] UGC pushlogs
+    [x] Notify version control updates
+    [x] UGC pushlogs
     [x] Validators
 
 ## 🏆 Credits
