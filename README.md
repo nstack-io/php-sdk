@@ -30,7 +30,7 @@ $config = new \NStack\Config('APP_ID', 'REST_KEY');
 $nstack = new \NStack\NStack($config);
 ```
  
-## 💡 Features
+## 💡 Features implemented
 
     [x] Geographic continent
     [x] Geographic countries
