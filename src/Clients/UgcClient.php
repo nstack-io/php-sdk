@@ -20,7 +20,7 @@ class UgcClient extends NStackClient
     protected $path = 'ugc';
 
     /**
-     * store
+     * storePushLog
      *
      * @param String $provider
      * @param String $key
@@ -32,7 +32,7 @@ class UgcClient extends NStackClient
      * @param String|null $relationType
      * @param int|null $relationId
      */
-    public function store(
+    public function storePushLog(
         String $provider,
         String $key,
         String $type,
