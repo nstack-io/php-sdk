@@ -34,7 +34,7 @@ class NStackClient
                 'timeout'  => 5,
                 'headers'  => [
                     'X-Application-Id' => $nstackConfig->getAppId(),
-                    'X-Rest-Api-Key'   => $nstackConfig->getRestAppKey(),
+                    'X-Rest-Api-Key'   => $nstackConfig->getRestApiKey(),
                     'Content-Type'     => 'application/json',
                 ],
             ]));
