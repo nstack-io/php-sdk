@@ -6,7 +6,7 @@ namespace NStack\Models;
  * Class EmailValidation
  *
  * @package NStack\Models
- * @author Tiago Araujo <tiar@nodesagency.com>
+ * @author  Tiago Araujo <tiar@nodesagency.com>
  */
 class EmailValidation extends Model
 {
@@ -42,5 +42,4 @@ class EmailValidation extends Model
     {
         return $this->ok;
     }
-
 }

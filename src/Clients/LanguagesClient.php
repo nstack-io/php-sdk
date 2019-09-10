@@ -48,8 +48,8 @@ class LanguagesClient extends NStackClient
      * search
      *
      * @param String $term
-     * @param int $page
-     * @param int $limit
+     * @param int    $page
+     * @param int    $limit
      * @return array
      * @throws FailedToParseException
      */

@@ -9,7 +9,7 @@ use NStack\Models\IpAddress;
  * Class IpAddressesClient
  *
  * @package NStack\Clients
- * @author Tiago Araujo <tiar@nodesagency.com>
+ * @author  Tiago Araujo <tiar@nodesagency.com>
  */
 class IpAddressesClient extends NStackClient
 {
@@ -28,13 +28,14 @@ class IpAddressesClient extends NStackClient
         $response = $this->client->get($this->buildPath($this->path));
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new IpAddress($data['data']);
     }
 
     /**
      * show
      *
-     * @param   String $ip
+     * @param String $ip
      * @return  IpAddress
      * @throws  FailedToParseException
      * @author  Tiago Araujo <tiar@nodesagency.com>
@@ -44,6 +45,7 @@ class IpAddressesClient extends NStackClient
         $response = $this->client->get($this->buildPath($this->path . '?ip=' . $ip));
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new IpAddress($data['data']);
     }
 }

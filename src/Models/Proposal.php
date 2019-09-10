@@ -38,13 +38,13 @@ class Proposal extends Model
      */
     public function parse(array $data)
     {
-        $this->id               = (int)$data['id'];
-        $this->applicationId    = (int)$data['application_id'];
-        $this->key              = (string)$data['key'];
-        $this->section          = (string)$data['section'];
-        $this->locale           = (string)$data['locale'];
-        $this->value            = (string)$data['value'];
-        $this->canDelete        = (string)$data['can_delete'];
+        $this->id = (int)$data['id'];
+        $this->applicationId = (int)$data['application_id'];
+        $this->key = (string)$data['key'];
+        $this->section = (string)$data['section'];
+        $this->locale = (string)$data['locale'];
+        $this->value = (string)$data['value'];
+        $this->canDelete = (string)$data['can_delete'];
     }
 
     /**
@@ -55,14 +55,13 @@ class Proposal extends Model
     public function toArray(): array
     {
         return [
-            'id'                => $this->id,
-            'application_id'    => $this->applicationId,
-            'key'               => $this->key,
-            'section'           => $this->section,
-            'locale'            => $this->locale,
-            'value'             => $this->value,
-            'can_delete'        => $this->canDelete,
+            'id'             => $this->id,
+            'application_id' => $this->applicationId,
+            'key'            => $this->key,
+            'section'        => $this->section,
+            'locale'         => $this->locale,
+            'value'          => $this->value,
+            'can_delete'     => $this->canDelete,
         ];
     }
-
 }

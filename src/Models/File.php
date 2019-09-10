@@ -53,18 +53,18 @@ class File extends Model
      */
     public function parse(array $data)
     {
-        $this->id           = (int)$data['id'];
-        $this->name         = (string)$data['name'];
-        $this->tags         = (string)$data['tags'];
-        $this->privacy      = (string)$data['privacy'];
-        $this->goneAt       = (string)$data['gone_at'];
-        $this->size         = (string)$data['size'];
-        $this->mime         = (string)$data['mime'];
-        $this->password     = (string)$data['password'];
-        $this->url          = (string)$data['url'];
-        $this->cdnUrl       = (string)$data['cdn_url'];
-        $this->showUrl      = (string)$data['show_url'];
-        $this->downloadUrl  = (string)$data['download_url'];
+        $this->id = (int)$data['id'];
+        $this->name = (string)$data['name'];
+        $this->tags = (string)$data['tags'];
+        $this->privacy = (string)$data['privacy'];
+        $this->goneAt = (string)$data['gone_at'];
+        $this->size = (string)$data['size'];
+        $this->mime = (string)$data['mime'];
+        $this->password = (string)$data['password'];
+        $this->url = (string)$data['url'];
+        $this->cdnUrl = (string)$data['cdn_url'];
+        $this->showUrl = (string)$data['show_url'];
+        $this->downloadUrl = (string)$data['download_url'];
     }
 
     /**
@@ -75,19 +75,18 @@ class File extends Model
     public function toArray(): array
     {
         return [
-            'id'            => $this->id,
-            'name'          => $this->name,
-            'tags'          => $this->tags,
-            'privacy'       => $this->privacy,
-            'gone_at'       => $this->goneAt,
-            'size'          => $this->size,
-            'password'      => $this->password,
-            'url'           => $this->url,
-            'cdn_url'       => $this->cdnUrl,
-            'show_url'      => $this->showUrl,
-            'download_url'  => $this->downloadUrl,
-            'mime'          => $this->mime,
+            'id'           => $this->id,
+            'name'         => $this->name,
+            'tags'         => $this->tags,
+            'privacy'      => $this->privacy,
+            'gone_at'      => $this->goneAt,
+            'size'         => $this->size,
+            'password'     => $this->password,
+            'url'          => $this->url,
+            'cdn_url'      => $this->cdnUrl,
+            'show_url'     => $this->showUrl,
+            'download_url' => $this->downloadUrl,
+            'mime'         => $this->mime,
         ];
     }
-
 }

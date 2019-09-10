@@ -36,11 +36,11 @@ class SeenUpdate extends Model
      */
     public function parse(array $data)
     {
-        $this->id       = (int)$data['id'];
-        $this->guid     = (int)$data['guid'];
-        $this->answer   = (string)$data['answer'];
-        $this->type     = (string)$data['type'];
-        $this->created  = new DateTime($data['created']);
+        $this->id = (int)$data['id'];
+        $this->guid = (int)$data['guid'];
+        $this->answer = (string)$data['answer'];
+        $this->type = (string)$data['type'];
+        $this->created = new DateTime($data['created']);
     }
 
     /**
@@ -98,5 +98,4 @@ class SeenUpdate extends Model
     {
         return $this->created;
     }
-
 }

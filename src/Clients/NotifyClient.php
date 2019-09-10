@@ -10,7 +10,7 @@ use NStack\Models\VersionControlUpdate;
  * Class NotifyClient
  *
  * @package NStack\Clients
- * @author Tiago Araujo <tiar@nodesagency.com>
+ * @author  Tiago Araujo <tiar@nodesagency.com>
  */
 class NotifyClient extends NStackClient
 {
@@ -20,7 +20,7 @@ class NotifyClient extends NStackClient
     /**
      * versionControlIndex
      *
-     * @param String $platform
+     * @param String      $platform
      * @param String|null $currentVersion
      * @param String|null $lastVersion
      * @param String|null $test
@@ -33,8 +33,7 @@ class NotifyClient extends NStackClient
         String $currentVersion = null,
         String $lastVersion = null,
         String $test = null
-    ): VersionControlUpdate
-    {
+    ): VersionControlUpdate {
         $path = $this->buildPath($this->path) . "?platform=" . $platform;
         if ($currentVersion) {
             $path = $path . '&current_version=' . $currentVersion;
@@ -49,6 +48,7 @@ class NotifyClient extends NStackClient
         $response = $this->client->get($path);
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new VersionControlUpdate($data);
     }
 
@@ -56,7 +56,7 @@ class NotifyClient extends NStackClient
      * markUpdateAsSeen
      *
      * @param String $guid
-     * @param int $updateId
+     * @param int    $updateId
      * @param String $answer
      * @param String $type
      * @return SeenUpdate
@@ -70,11 +70,11 @@ class NotifyClient extends NStackClient
                 'update_id' => $updateId,
                 'answer'    => $answer,
                 'type'      => $type,
-            ]
+            ],
         ]);
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new SeenUpdate($data['data']);
     }
-
 }

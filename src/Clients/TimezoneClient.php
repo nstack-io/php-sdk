@@ -48,6 +48,7 @@ class TimezoneClient extends NStackClient
         $response = $this->client->get($this->buildPath($this->path . '/' . $id));
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new Timezone($data['data']);
     }
 
@@ -64,7 +65,7 @@ class TimezoneClient extends NStackClient
         $response = $this->client->get($this->buildPath($this->path . '/by_lat_lng?lat_lng=' . $lat . ',' . $lng));
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new Timezone($data['data']);
     }
-
 }

@@ -6,7 +6,7 @@ namespace NStack\Models;
  * Class IpAddress
  *
  * @package NStack\Models
- * @author Tiago Araujo <tiar@nodesagency.com>
+ * @author  Tiago Araujo <tiar@nodesagency.com>
  */
 class IpAddress extends Model
 {
@@ -85,20 +85,20 @@ class IpAddress extends Model
     public function toArray(): array
     {
         return [
-            'id' => $this->id,
-            'ip_start' => $this->ipStart,
-            'ip_end' => $this->ipEnd,
-            'country' => $this->country,
-            'state_prov' => $this->stateProv,
-            'city' => $this->city,
-            'lat' => $this->lat,
-            'lng' => $this->lng,
+            'id'               => $this->id,
+            'ip_start'         => $this->ipStart,
+            'ip_end'           => $this->ipEnd,
+            'country'          => $this->country,
+            'state_prov'       => $this->stateProv,
+            'city'             => $this->city,
+            'lat'              => $this->lat,
+            'lng'              => $this->lng,
             'time_zone_offset' => $this->timeZoneOffset,
-            'time_zone_name' => $this->timeZoneName,
-            'isp_name' => $this->ispName,
-            'connection_type' => $this->connectionType,
-            'type' => $this->type,
-            'required_ip' => $this->requiredIp,
+            'time_zone_name'   => $this->timeZoneName,
+            'isp_name'         => $this->ispName,
+            'connection_type'  => $this->connectionType,
+            'type'             => $this->type,
+            'required_ip'      => $this->requiredIp,
         ];
     }
 
@@ -213,5 +213,4 @@ class IpAddress extends Model
     {
         return $this->requiredIp;
     }
-
 }

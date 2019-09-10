@@ -20,7 +20,7 @@ abstract class Model
         } catch (\Throwable $e) {
             $message = sprintf('Failed to parse %s: %s', get_called_class(), $e->getMessage());
 
-            if(!empty($data['id'])) {
+            if (!empty($data['id'])) {
                 $message .= ' ID: ' . $data['id'];
             }
 

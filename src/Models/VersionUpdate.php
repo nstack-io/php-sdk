@@ -52,14 +52,12 @@ class VersionUpdate extends Model
     public function toArray(): array
     {
         return [
-            'id' => $this->id,
-            'version' => $this->version,
-            'update' => $this->update,
+            'id'             => $this->id,
+            'version'        => $this->version,
+            'update'         => $this->update,
             'new_in_version' => $this->newInVersion,
-            'change_log' => $this->changeLog,
-            'file_url' => $this->fileUrl,
+            'change_log'     => $this->changeLog,
+            'file_url'       => $this->fileUrl,
         ];
     }
-
-
 }

@@ -4,14 +4,13 @@ namespace NStack\Clients;
 
 use NStack\Exceptions\FailedToParseException;
 use NStack\Models\EmailValidation;
-use NStack\Models\IpAddress;
 use NStack\Models\PhoneValidation;
 
 /**
  * Class ValidatorsClient
  *
  * @package NStack\Clients
- * @author Tiago Araujo <tiar@nodesagency.com>
+ * @author  Tiago Araujo <tiar@nodesagency.com>
  */
 class ValidatorsClient extends NStackClient
 {
@@ -31,16 +30,17 @@ class ValidatorsClient extends NStackClient
         $response = $this->client->get($this->buildPath($this->path . '/email?email=' . $email));
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new EmailValidation($data);
     }
 
     /**
      * phone
      *
-     * @param String $phone
-     * @param String|null $fallbackCountryCode
+     * @param String       $phone
+     * @param String|null  $fallbackCountryCode
      * @param Boolean|null $validateWithTwilio
-     * @param String|null $twilioType
+     * @param String|null  $twilioType
      * @return PhoneValidation
      * @throws FailedToParseException
      * @author  Tiago Araujo <tiar@nodesagency.com>
@@ -50,8 +50,7 @@ class ValidatorsClient extends NStackClient
         String $fallbackCountryCode = null,
         bool $validateWithTwilio = null,
         String $twilioType = null
-    ): PhoneValidation
-    {
+    ): PhoneValidation {
         $path = $this->buildPath($this->path . '/phone?phone=' . $phone);
 
         if ($fallbackCountryCode) {
@@ -67,6 +66,7 @@ class ValidatorsClient extends NStackClient
         $response = $this->client->get($path);
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new PhoneValidation($data);
     }
 }
