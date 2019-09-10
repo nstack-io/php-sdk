@@ -44,9 +44,9 @@ class VersionControlUpdate extends Model
     public function toArray(): array
     {
         return [
-            'update' => $this->update,
+            'update'          => $this->update,
             'update_versions' => $this->updateVersions,
-            'new_in_version' => $this->newInVersion,
+            'new_in_version'  => $this->newInVersion,
             'new_in_versions' => $this->newInVersions,
         ];
     }
@@ -82,5 +82,4 @@ class VersionControlUpdate extends Model
     {
         return $this->newInVersions;
     }
-
 }

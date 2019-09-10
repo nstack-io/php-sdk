@@ -3,7 +3,6 @@
 namespace NStack\Clients;
 
 use NStack\Exceptions\FailedToParseException;
-use NStack\Models\IpAddress;
 use NStack\Models\Proposal;
 use NStack\Models\ProposalDeleted;
 
@@ -43,11 +42,11 @@ class ProposalsClient extends NStackClient
      * store
      *
      * @param String|null $guid
-     * @param String $key
-     * @param String $value
-     * @param String $platform
-     * @param String $locale
-     * @param String $section
+     * @param String      $key
+     * @param String      $value
+     * @param String      $platform
+     * @param String      $locale
+     * @param String      $section
      * @return Proposal
      * @throws FailedToParseException
      */
@@ -58,32 +57,31 @@ class ProposalsClient extends NStackClient
         String $platform,
         String $locale,
         String $section
-    )
-    {
+    ) {
         $response = $this->client->post($this->buildPath($this->path), [
             'form_params' => [
-                'key'       => $key,
-                'value'     => $value,
-                'locale'    => $locale,
-                'platform'  => $platform,
-                'guid'      => $guid,
-                'section'   => $section,
-            ]
+                'key'      => $key,
+                'value'    => $value,
+                'locale'   => $locale,
+                'platform' => $platform,
+                'guid'     => $guid,
+                'section'  => $section,
+            ],
         ]);
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new Proposal($data['data']);
     }
 
     /**
      * delete
      *
-     * @param int $id
+     * @param int    $id
      * @param String $guid
      */
     public function delete(int $id, String $guid)
     {
         $this->client->delete($this->buildPath($this->path . '/' . $id . '?guid=' . $guid));
     }
-
 }

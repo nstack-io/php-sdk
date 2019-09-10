@@ -49,7 +49,7 @@ class LocalizeLanguagesClient extends NStackClient
         $response = $this->client->get($this->buildPath($this->path . '/' . $platform . '/languages/best_fit'));
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
+
         return new Language($data['data']);
     }
-
 }

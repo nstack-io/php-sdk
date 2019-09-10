@@ -20,24 +20,29 @@ class FilesClient extends NStackClient
     /**
      * store
      *
-     * @param String $name
-     * @param array $tagsArray
+     * @param String   $name
+     * @param array    $tagsArray
      * @param DateTime $goneAt
-     * @param String $privacy
-     * @param String $imagePath
+     * @param String   $privacy
+     * @param String   $imagePath
      * @return File
      * @throws FailedToParseException
      */
-    public function store(String $name, String $privacy, String $imagePath, array $tagsArray = null, DateTime $goneAt = null)
-    {
+    public function store(
+        String $name,
+        String $privacy,
+        String $imagePath,
+        array $tagsArray = null,
+        DateTime $goneAt = null
+    ) {
         $response = $this->client->post($this->buildPath($this->path), [
             'form_params' => [
-                'name'      => $name,
-                'tags'      => is_null($tagsArray) ? null : implode(",", $tagsArray),
-                'gone_at'   => $goneAt,
-                'privacy'   => $privacy,
-                'file'      => fopen($imagePath, 'r'),
-            ]
+                'name'    => $name,
+                'tags'    => is_null($tagsArray) ? null : implode(",", $tagsArray),
+                'gone_at' => $goneAt,
+                'privacy' => $privacy,
+                'file'    => fopen($imagePath, 'r'),
+            ],
         ]);
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
@@ -48,12 +53,12 @@ class FilesClient extends NStackClient
     /**
      * storeWithPath
      *
-     * @param String $name
-     * @param String $privacy
-     * @param String $path
-     * @param String $mime
-     * @param int $size
-     * @param array|null $tagsArray
+     * @param String        $name
+     * @param String        $privacy
+     * @param String        $path
+     * @param String        $mime
+     * @param int           $size
+     * @param array|null    $tagsArray
      * @param DateTime|null $goneAt
      * @return File
      * @throws FailedToParseException
@@ -66,23 +71,21 @@ class FilesClient extends NStackClient
         int $size,
         array $tagsArray = null,
         DateTime $goneAt = null
-    )
-    {
+    ) {
         $response = $this->client->post($this->buildPath($this->path . '/path'), [
             'form_params' => [
-                'name'      => $name,
-                'tags'      => is_null($tagsArray) ? null : implode(",", $tagsArray),
-                'gone_at'   => $goneAt,
-                'privacy'   => $privacy,
-                'path'      => $path,
-                'mime'      => $mime,
-                'size'      => $size,
-            ]
+                'name'    => $name,
+                'tags'    => is_null($tagsArray) ? null : implode(",", $tagsArray),
+                'gone_at' => $goneAt,
+                'privacy' => $privacy,
+                'path'    => $path,
+                'mime'    => $mime,
+                'size'    => $size,
+            ],
         ]);
         $contents = $response->getBody()->getContents();
         $data = json_decode($contents, true);
 
         return new File($data['data']);
     }
-
 }

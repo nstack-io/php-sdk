@@ -6,7 +6,7 @@ namespace NStack\Models;
  * Class PhoneValidation
  *
  * @package NStack\Models
- * @author Tiago Araujo <tiar@nodesagency.com>
+ * @author  Tiago Araujo <tiar@nodesagency.com>
  */
 class PhoneValidation extends Model
 {
@@ -27,9 +27,9 @@ class PhoneValidation extends Model
      */
     public function parse(array $data)
     {
-        $this->ok               = (String)$data['ok'];
-        $this->countryCode      = (String)$data['country_code'];
-        $this->nationalNumber   = (String)$data['national_number'];
+        $this->ok = (String)$data['ok'];
+        $this->countryCode = (String)$data['country_code'];
+        $this->nationalNumber = (String)$data['national_number'];
     }
 
     /**
@@ -41,9 +41,9 @@ class PhoneValidation extends Model
     public function toArray(): array
     {
         return [
-            'ok'                => $this->ok,
-            'country_code'      => $this->countryCode,
-            'national_number'   => $this->nationalNumber,
+            'ok'              => $this->ok,
+            'country_code'    => $this->countryCode,
+            'national_number' => $this->nationalNumber,
         ];
     }
 
@@ -70,5 +70,4 @@ class PhoneValidation extends Model
     {
         return $this->nationalNumber;
     }
-
 }

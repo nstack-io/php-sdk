@@ -2,12 +2,6 @@
 
 namespace NStack\Clients;
 
-use NStack\Exceptions\FailedToParseException;
-use NStack\Models\File;
-use NStack\Models\IpAddress;
-use NStack\Models\Proposal;
-use NStack\Models\ProposalDeleted;
-
 /**
  * Class UgcClient
  *
@@ -22,15 +16,15 @@ class UgcClient extends NStackClient
     /**
      * storePushLog
      *
-     * @param String $provider
-     * @param String $key
-     * @param String $type
-     * @param bool $succeeded
+     * @param String      $provider
+     * @param String      $key
+     * @param String      $type
+     * @param bool        $succeeded
      * @param String|null $request
      * @param String|null $response
-     * @param int|null $userId
+     * @param int|null    $userId
      * @param String|null $relationType
-     * @param int|null $relationId
+     * @param int|null    $relationId
      */
     public function storePushLog(
         String $provider,
@@ -42,8 +36,7 @@ class UgcClient extends NStackClient
         int $userId = null,
         String $relationType = null,
         int $relationId = null
-    )
-    {
+    ) {
         $this->client->post($this->buildPath($this->path), [
             'body' => '{
                             "provider": "' . $provider . '",
@@ -55,8 +48,7 @@ class UgcClient extends NStackClient
                             "user_id": ' . $userId . '
                             "relation_type": "' . $relationType . '",
                             "relation_id": ' . $relationId . '
-                        }'
+                        }',
         ]);
     }
-
 }

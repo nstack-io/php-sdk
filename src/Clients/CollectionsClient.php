@@ -2,14 +2,11 @@
 
 namespace NStack\Clients;
 
-use NStack\Exceptions\FailedToParseException;
-use NStack\Models\IpAddress;
-
 /**
  * Class CollectionsClient
  *
  * @package NStack\Clients
- * @author Tiago Araujo <tiar@nodesagency.com>
+ * @author  Tiago Araujo <tiar@nodesagency.com>
  */
 class CollectionsClient extends NStackClient
 {
@@ -26,22 +23,24 @@ class CollectionsClient extends NStackClient
     {
         $response = $this->client->get($this->buildPath($this->path . '/' . $collectionId));
         $contents = $response->getBody()->getContents();
+
         return json_decode($contents, true)['data'];
     }
 
     /**
      * createItem
      *
-     * @param int $collectionId
+     * @param int   $collectionId
      * @param array $params
      * @return array
      */
     public function createItem(int $collectionId, array $params): array
     {
         $response = $this->client->post($this->buildPath($this->path . '/' . $collectionId . '/items'), [
-            'form_params' => $params
+            'form_params' => $params,
         ]);
         $contents = $response->getBody()->getContents();
+
         return json_decode($contents, true)['data'];
     }
 
@@ -59,17 +58,19 @@ class CollectionsClient extends NStackClient
     /**
      * updateItem
      *
-     * @param int $collectionId
-     * @param int $itemId
+     * @param int   $collectionId
+     * @param int   $itemId
      * @param array $params
      * @return array
      */
     public function updateItem(int $collectionId, int $itemId, array $params): array
     {
-        $response = $this->client->post($this->buildPath($this->path . '/' . $collectionId . '/items/' . $itemId . '/update'), [
-            'form_params' => $params
+        $response = $this->client->post($this->buildPath($this->path . '/' . $collectionId . '/items/' . $itemId .
+                                                         '/update'), [
+            'form_params' => $params,
         ]);
         $contents = $response->getBody()->getContents();
+
         return json_decode($contents, true)['data'];
     }
 
@@ -84,6 +85,7 @@ class CollectionsClient extends NStackClient
     {
         $response = $this->client->get($this->buildPath($this->path . '/' . $collectionId . '/items/' . $itemId));
         $contents = $response->getBody()->getContents();
+
         return json_decode($contents, true)['data'];
     }
 }

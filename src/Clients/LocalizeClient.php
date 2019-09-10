@@ -2,7 +2,6 @@
 
 namespace NStack\Clients;
 
-use NStack\Models\Country;
 use NStack\Models\Resource;
 
 /**
