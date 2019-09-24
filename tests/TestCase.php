@@ -98,4 +98,5 @@ class TestCase extends \PHPUnit\Framework\TestCase
     {
         return new Config('', '');
     }
+
 }

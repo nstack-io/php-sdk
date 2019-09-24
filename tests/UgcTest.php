@@ -6,7 +6,7 @@ class UgcTest extends TestCase
 {
     public function testUgcPushlogs()
     {
-        $mock = $this->getMockBuilder('UgcClient')
+        $mock = $this->getMockBuilder('PushLogClient')
             ->setMethods(['storePushLog'])
             ->getMock();
 
