@@ -20,7 +20,7 @@ class Config
     protected $appId;
 
     /** @var string */
-    protected $restAppKey;
+    protected $restApiKey;
 
     /** @var string|null */
     protected $masterKey;
@@ -29,7 +29,7 @@ class Config
      * Config constructor.
      *
      * @param string      $appId
-     * @param string      $restAppKey
+     * @param string      $restApiKey
      * @param string|null $masterKey
      * @param string|null $baseUrl
      * @param string      $version
@@ -37,13 +37,13 @@ class Config
      */
     public function __construct(
         string $appId,
-        string $restAppKey,
+        string $restApiKey,
         ?string $masterKey = null,
         ?string $baseUrl = null,
         string $version = 'v2'
     ) {
         $this->appId = $appId;
-        $this->restAppKey = $restAppKey;
+        $this->restApiKey = $restApiKey;
         $this->masterKey = $masterKey;
 
         if ($baseUrl) {
@@ -64,7 +64,7 @@ class Config
     {
         return new self(
             $data['application_id'],
-            $data['rest_app_key'],
+            $data['rest_api_key'],
             $data['master_key'] ?? null,
             $data['base_url'] ?? null,
             $data['version']
@@ -114,25 +114,25 @@ class Config
     }
 
     /**
-     * getRestAppKey
+     * getRestApiKey
      *
      * @return string
      * @author Casper Rasmussen <cr@nodes.dk>
      */
-    public function getRestAppKey(): string
+    public function getRestApiKey(): string
     {
-        return $this->restAppKey;
+        return $this->restApiKey;
     }
 
     /**
-     * setRestAppKey
+     * setRestApiKey
      *
-     * @param string $restAppKey
+     * @param string $restApiKey
      * @author Casper Rasmussen <cr@nodes.dk>
      */
-    public function setRestAppKey(string $restAppKey): void
+    public function setRestApoKey(string $restApiKey): void
     {
-        $this->restAppKey = $restAppKey;
+        $this->restApiKey = $restApiKey;
     }
 
     /**
