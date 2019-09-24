@@ -7,12 +7,12 @@ use NStack\Models\SeenUpdate;
 use NStack\Models\VersionControlUpdate;
 
 /**
- * Class NotifyClient
+ * Class VersionControlClient
  *
  * @package NStack\Clients
  * @author  Tiago Araujo <tiar@nodesagency.com>
  */
-class NotifyClient extends NStackClient
+class VersionControlClient extends NStackClient
 {
     /** @var string */
     protected $path = 'notify/updates';

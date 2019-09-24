@@ -3,12 +3,12 @@
 namespace NStack\Clients;
 
 /**
- * Class UgcClient
+ * Class PushLogClient
  *
  * @package NStack\Clients
  * @author  Tiago Araujo <tiar@nodesagency.com>
  */
-class UgcClient extends NStackClient
+class PushLogClient extends NStackClient
 {
     /** @var string */
     protected $path = 'ugc';

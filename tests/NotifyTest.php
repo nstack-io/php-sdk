@@ -5,7 +5,7 @@ namespace NStack\Tests;
 use NStack\Clients\ContinentsClient;
 use NStack\Clients\CountriesClient;
 use NStack\Clients\IpAddressesClient;
-use NStack\Clients\NotifyClient;
+use NStack\Clients\VersionControlClient;
 use NStack\Models\Continent;
 use NStack\Models\Country;
 use NStack\Models\IpAddress;
@@ -18,7 +18,7 @@ class NotifyTest extends TestCase
     {
         $client = $this->getClientWithMockedGet('notify-version-control-update.json');
 
-        $client = new NotifyClient($this->getConfig(), $client);
+        $client = new VersionControlClient($this->getConfig(), $client);
         $entry = $client->versionControlIndex("mobile");
 
         $this->assertInstanceOf(VersionControlUpdate::class, $entry);
@@ -28,7 +28,7 @@ class NotifyTest extends TestCase
     {
         $client = $this->getClientWithMockedPost('notify-version-control-seen-update.json');
 
-        $client = new NotifyClient($this->getConfig(), $client);
+        $client = new VersionControlClient($this->getConfig(), $client);
         $entry = $client->markUpdateAsSeen('test', 689, 'no', 'newer_version');
 
         $this->assertInstanceOf(SeenUpdate::class, $entry);
